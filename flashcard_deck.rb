@@ -8,11 +8,8 @@ class FlashCardDeck
   attr_accessor :selected_card, :deck
 
   def initialize(file)
-    @deck = []
     card_array = parse_cards_from_file(file)
-   @deck = card_array.map {|card_info| Card.new(card_info)}
-    #parse the sample card file
-
+    @deck = card_array.map {|card_info| Card.new(card_info)}
   end
 
   def select_card
@@ -21,9 +18,11 @@ class FlashCardDeck
   end
 
   def remove_card(card)
-    # if selected_card
-    # end
     @deck.delete(card)
+  end
+
+  def empty?
+    @deck.length == 0 ? true : false
   end
 
 end
