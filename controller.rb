@@ -13,13 +13,15 @@ class Controller
   def run_interface
     @view.intro
     @view.display(@current_card.definition)
-    until (input = @view.input) == "exit"
+    until (input = @view.input) == "exit" || @flashcard_deck.empty?
       if input != @current_card.term
         @view.wrong_guess
       else
         @view.right_guess
-        @current_card = @flashcard_deck.select_card
-        @view.display(@current_card.definition)
+        unless @flashcard_deck.empty?
+          @current_card = @flashcard_deck.select_card
+          @view.display(@current_card.definition)
+        end
       end
     end
     @view.goodbye
