@@ -11,10 +11,10 @@ module Parseable
 
     all_cards = []
 
-    for i in (0..(csv_text.length/2)-1)
+    for i in (0..(text.length/2)-1)
       card_data = {}
-      card_data[:definition] = csv_text[definition_counter]
-      card_data[:term] = csv_text[term_counter]
+      card_data[:definition] = text[definition_counter]
+      card_data[:term] = text[term_counter]
       definition_counter += 2
       term_counter +=2
       all_cards << card_data
