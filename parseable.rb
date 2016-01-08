@@ -21,21 +21,6 @@ module Parseable
     end
 
     all_cards
-    # {definition: read_definition, term: read_term}
   end
 
 end
-
-# class Tester
-#   include Parseable
-
-# attr_accessor :test_object
-
-#   def initialize
-#     @test_object = parse_cards_from_file('sample_cards.txt')
-#   end
-# end
-
-# test_thing = Tester.new
-
-# p test_thing.test_object
