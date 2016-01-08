@@ -1,5 +1,5 @@
 require_relative '../flashcard_deck'
-require_relative '../card'
+# require_relative '../card'
 
 describe FlashCardDeck do
   let(:flashcard_deck) {FlashCardDeck.new}
